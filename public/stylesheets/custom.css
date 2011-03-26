@@ -188,6 +188,14 @@ div.field, div.action {
 
 .edit_gravatar {
 	float: right;
-	margin-right: 200px;
-	margin-top: -200px;
+	margin-right: 10em;
+	margin-top: -15em;
+}
+
+ul.users {
+	margin-left: 1.5em;
+}
+
+ul.users li {
+	list-style: none;
 }
