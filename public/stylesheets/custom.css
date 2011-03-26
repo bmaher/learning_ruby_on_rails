@@ -183,3 +183,11 @@ div.field, div.action {
 	font-size: 12px;
 	list-style: square;
 }
+
+/* Edit user */
+
+.edit_gravatar {
+	float: right;
+	margin-right: 200px;
+	margin-top: -200px;
+}
