@@ -111,3 +111,30 @@ footer {
 footer nav {
 	float: none;
 }
+
+/* User show page */
+
+div.profile {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+div.main {
+	width: 70%;
+	padding: 1em;
+}
+.sidebar {
+	float: right;
+	margin-top: -85px;
+	margin-right: 0px;
+	background: #ffc;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 35px;
+}
+
+.profile img.gravatar {
+	border: 1px solid #999;
+	margin-bottom: -15px; 
+}
