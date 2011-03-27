@@ -125,8 +125,7 @@ div.main {
 }
 .sidebar {
 	float: right;
-	margin-top: -85px;
-	margin-right: 0px;
+	margin-top: -12px;
 	background: #ffc;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -192,6 +191,8 @@ div.field, div.action {
 	margin-top: -15em;
 }
 
+/* Users index */
+
 ul.users {
 	margin-left: 1.5em;
 }
@@ -202,4 +203,61 @@ ul.users li {
 
 .pagination {
 	margin-bottom: 1em;
+}
+
+/* Microposts */
+
+h1.micropost {
+	margin-bottom: 0.3em;
+}
+
+div.microposts {
+	margin-top: 2em;
+}
+
+div.microposts div {
+	height: 70px;
+}
+
+div.microposts div.gravatar {
+	border-top: 1px solid #ccc;
+	vertical-align: top;
+	width: 50px;
+}
+
+div.microposts div.micropost {
+	border-top: 1px solid #ccc;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+div.microposts div.micropost span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+div.user_info img {
+	padding-right: 0.1em;
+}
+
+div.user_info a {
+	text-decoration: none;
+}
+
+div.user_info span.user_name {
+	position: absolute;
+}
+
+div.user_info span.microposts {
+	font-size: 80%;
+}
+
+form.new_micropost {
+	margin-bottom: 2em;
+}
+
+form.new_micropost textarea {
+	height: 4em;
+	margin-bottom: 0;
 }

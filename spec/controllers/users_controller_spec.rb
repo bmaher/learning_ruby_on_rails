@@ -20,10 +20,7 @@ describe UsersController do
         @user = test_sign_in(Factory(:user))
         Factory(:user, :email => "user.one@example.com")
         Factory(:user, :email => "user.two@example.com")
-        
-        30.times do
-          Factory(:user, :email => Factory.next(:email))
-        end
+        30.times { Factory(:user, :email => Factory.next(:email)) }
       end
       
       it "should be successful" do
@@ -108,6 +105,27 @@ describe UsersController do
       response.should have_selector("div>a", :content => user_path(@user),
                                              :href    => user_path(@user))
     end
+    
+    it "should show the user's microposts" do
+      first_micropost  = Factory(:micropost, :user => @user, :content => "Lorem ipsum")
+      second_micropost = Factory(:micropost, :user => @user, :content => "Lorem ipsum dolor")
+      get :show, :id => @user
+      response.should have_selector("span.content", :content => first_micropost.content)
+      response.should have_selector("span.content", :content => first_micropost.content)
+    end
+    
+    it "should paginate microposts" do
+      35.times { Factory(:micropost, :user => @user, :content => "Lorem") }
+      get :show, :id => @user
+      response.should have_selector("div.pagination")
+    end
+    
+    it "should display the micropost count" do
+      10.times { Factory(:micropost, :user => @user, :content => "Lorem") }
+      get :show, :id => @user
+      response.should have_selector("div.sidebar", :content=> @user.microposts.count.to_s)
+    end
+    
   end
   
   describe "GET 'new'" do
