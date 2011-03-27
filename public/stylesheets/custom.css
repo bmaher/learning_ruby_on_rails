@@ -199,3 +199,7 @@ ul.users {
 ul.users li {
 	list-style: none;
 }
+
+.pagination {
+	margin-bottom: 1em;
+}
