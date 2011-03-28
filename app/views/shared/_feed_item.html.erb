@@ -1,0 +1,19 @@
+<div class="micropost" id=<%= feed_item.id %>>
+	<span class="gravatar">
+		<%= link_to gravatar_for(feed_item.user), feed_item.user, :class => "feed_user"%>
+	</span>
+	<span class="feed_user">
+	<%= link_to feed_item.user.name, feed_item.user, :class => "feed_user" %>	
+	</span><br />
+	<div class="feed_content"><%= feed_item.content %></div>
+	<div class="feed_timestamp">
+		Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+	</div>
+</div>
+<% if current_user?(feed_item.user) %>
+	<div class="delete">
+		<%= link_to "delete", feed_item, :method => :delete, 
+										 :confirm => "Are you sure?",
+										 :title => feed_item.content %>
+	</div>
+<% end %>
