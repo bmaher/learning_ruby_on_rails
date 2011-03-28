@@ -30,6 +30,31 @@ section h1 {
 	position: relative;
 }
 
+.sidebar {
+	background: #ffc;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 35px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 99%;
+	width: 132px;
+}
+
+.sidebar .following {
+	position: absolute;
+	width: 5px;
+}
+
+.sidebar .followers {
+	position: absolute;
+	right: 0;
+	margin-right: 5em;
+	width: 5px;
+}
+
 /* Links */
 
 a {
@@ -126,17 +151,7 @@ div.profile {
 
 div.main {
 	width: 70%;
-	padding: 1em;
-}
-.sidebar {
-	background: #ffc;
-	padding-top: 10px;
-	padding-left: 15px;
-	padding-right: 35px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 99%;
+	padding: 2em;
 }
 
 .profile img.gravatar {
