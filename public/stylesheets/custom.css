@@ -319,3 +319,10 @@ div.microposts .delete {
 	position: relative;
 	margin-left: 28em;
 }
+
+/* Following/Followers */
+
+.image_grid {
+	position: relative;
+	margin-top: 5em;
+}
