@@ -219,6 +219,13 @@ describe User do
          @user.feed.should_not include(third_micropost) 
        end
        
+       it "should include the microposts of followed users" do
+         followed = Factory(:user, :email => Factory.next(:email))
+         third_micropost = Factory(:micropost, :user => followed)
+         @user.follow!(followed)
+         @user.feed.should include(third_micropost)
+       end
+       
      end
    
    end 
